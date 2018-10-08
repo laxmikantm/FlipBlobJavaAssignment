@@ -8,7 +8,7 @@ public class DataWrapper {
         return instruction;
     }
 
-    public void setInstuction(String instruction) {
+    public void setInstuction(final String instruction) {
         this.instruction= instruction;
     }
 

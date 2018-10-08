@@ -52,6 +52,10 @@ public class TextBlobGenerator {
 
     private  String blob;
 
+    public String getBlob() {
+        return blob;
+    }
+
     public TextBlobGenerator(DataWrapper dataWrapper) {
 
         letterss[0] = "a";
@@ -77,26 +81,24 @@ public class TextBlobGenerator {
              }
         }
 
-        if(paddingStyle=="left")
+        if(paddingStyle== "left")
         {
-            String blob = "";
+            blob = "";
 
             int i=0;
             int j=5;
             for(j=i; i<addLettersFor.length(); i++,j++){
-                if(j>=5){
-                    j=i-j;
-                    if(j<0){
-                        j=5;
-                    }
-
+                if(j>=letterss.length-1){
+                    j=0;
                 }
                  blob=letterss[j] + blob;
 
             }
 
+                System.err.println("-------------DD-------------");
+
             for(; i<padRightFor.length(); i++);
-            blob = "" + blob;
+                blob = "" + blob;
 
         } else {
 
@@ -114,9 +116,7 @@ public class TextBlobGenerator {
 
     }
 
-    public String getBlob() {
-        return blob;
-    }
+
 
 
 
