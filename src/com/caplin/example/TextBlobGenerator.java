@@ -75,6 +75,8 @@ public class TextBlobGenerator {
         {
              if(instructions.contains("paddingStyle:left")) {
                  paddingStyle = "left";
+
+
              }
              if (instructions.contains("paddingStyle:right")){
                  paddingStyle = "right";
@@ -94,8 +96,6 @@ public class TextBlobGenerator {
                  blob=letterss[j] + blob;
 
             }
-
-                System.err.println("-------------DD-------------");
 
             for(; i<padRightFor.length(); i++);
                 blob = "" + blob;
